@@ -1,0 +1,1926 @@
+{
+  "lambda": 0.001,
+  "result_dir": "/home/chaahat/Desktop/PhD_projects/code/fault_testing/send_lorenzo/bad_ensembles/model_repair/store/neurips/results",
+  "defaults_dir": "/home/chaahat/Desktop/PhD_projects/code/fault_testing/send_lorenzo/bad_ensembles/model_repair/neurips_results/default_tables",
+  "benchmarks": [
+    "Beluga (3 Parts)",
+    "Beluga (4 Parts)",
+    "Beluga (5 Parts)",
+    "Beluga (6 Parts)",
+    "8Blocks CA",
+    "8Blocks CI",
+    "Transport",
+    "1WL (15, 10) Det",
+    "1WL (17, 10) Det",
+    "1WL (20, 10) Det",
+    "1WL (30, 20) Det",
+    "1WL (15, 10) Icy",
+    "1WL (17, 10) Icy",
+    "1WL (15, 10) I+P",
+    "1WL (17, 10) I+P",
+    "1WL (20, 10) I+P",
+    "1WL (30, 20) I+P",
+    "1WL (40, 25) I+P",
+    "2WL (30, 20) Det",
+    "2WL (40, 25) Det",
+    "2WL (30, 20) Icy",
+    "2WL (15, 10) I+P",
+    "2WL (17, 10) I+P",
+    "2WL (20, 10) I+P",
+    "2WL (30, 20) I+P",
+    "2WL (40, 25) I+P",
+    "Bounc. Ball",
+    "Bounc. Ball ($\\tau=0.01$)",
+    "Bounc. Ball ($\\tau=0.05$)",
+    "Inv. Pend.",
+    "Follow Car"
+  ],
+  "na_counts": {
+    "MILP": 2,
+    "MH": 9,
+    "FALoss": 3,
+    "PT": 8
+  },
+  "verified_safe": {
+    "MILP": [
+      "2WL (20, 10) I+P"
+    ],
+    "MH": [],
+    "FALoss": [],
+    "PT": []
+  },
+  "raincloud_stats": {
+    "eval": {
+      "safe": {
+        "Original": {
+          "n": 31,
+          "na": 0,
+          "median": 59.55,
+          "mean": 51.56096774193548,
+          "d_median": 0.0,
+          "d_mean": 0.0
+        },
+        "MILP Repair": {
+          "n": 31,
+          "na": 2,
+          "median": 98.02,
+          "mean": 86.64806451612901,
+          "d_median": 38.47,
+          "d_mean": 35.08709677419353
+        },
+        "MH": {
+          "n": 31,
+          "na": 9,
+          "median": 96.84,
+          "mean": 78.08064516129032,
+          "d_median": 37.290000000000006,
+          "d_mean": 26.519677419354842
+        },
+        "FALoss": {
+          "n": 31,
+          "na": 3,
+          "median": 82.99,
+          "mean": 71.89354838709677,
+          "d_median": 23.439999999999998,
+          "d_mean": 20.332580645161293
+        },
+        "PT": {
+          "n": 31,
+          "na": 8,
+          "median": 73.98,
+          "mean": 61.424838709677424,
+          "d_median": 14.430000000000007,
+          "d_mean": 9.863870967741946
+        }
+      },
+      "goal": {
+        "Original": {
+          "n": 31,
+          "na": 0,
+          "median": 77.61,
+          "mean": 52.09516129032257,
+          "d_median": 0.0,
+          "d_mean": 0.0
+        },
+        "MILP Repair": {
+          "n": 31,
+          "na": 2,
+          "median": 90.33,
+          "mean": 63.54677419354839,
+          "d_median": 12.719999999999999,
+          "d_mean": 11.451612903225815
+        },
+        "MH": {
+          "n": 31,
+          "na": 9,
+          "median": 80.73,
+          "mean": 58.880967741935486,
+          "d_median": 3.1200000000000045,
+          "d_mean": 6.785806451612913
+        },
+        "FALoss": {
+          "n": 31,
+          "na": 3,
+          "median": 80.5,
+          "mean": 57.58709677419355,
+          "d_median": 2.8900000000000006,
+          "d_mean": 5.491935483870975
+        },
+        "PT": {
+          "n": 31,
+          "na": 8,
+          "median": 80.5,
+          "mean": 57.13483870967742,
+          "d_median": 2.8900000000000006,
+          "d_mean": 5.039677419354845
+        }
+      }
+    },
+    "train": {
+      "safe": {
+        "Original": {
+          "n": 31,
+          "na": 0,
+          "median": 77.98,
+          "mean": 56.42645161290322,
+          "d_median": 0.0,
+          "d_mean": 0.0
+        },
+        "MILP Repair": {
+          "n": 31,
+          "na": 2,
+          "median": 100.0,
+          "mean": 91.17064516129032,
+          "d_median": 22.019999999999996,
+          "d_mean": 34.7441935483871
+        },
+        "MH": {
+          "n": 31,
+          "na": 9,
+          "median": 100.0,
+          "mean": 90.75516129032258,
+          "d_median": 22.019999999999996,
+          "d_mean": 34.328709677419354
+        },
+        "FALoss": {
+          "n": 31,
+          "na": 3,
+          "median": 100.0,
+          "mean": 87.03483870967742,
+          "d_median": 22.019999999999996,
+          "d_mean": 30.608387096774194
+        },
+        "PT": {
+          "n": 31,
+          "na": 8,
+          "median": 91.29,
+          "mean": 72.56677419354838,
+          "d_median": 13.310000000000002,
+          "d_mean": 16.14032258064516
+        }
+      },
+      "goal": {
+        "Original": {
+          "n": 31,
+          "na": 0,
+          "median": 77.76,
+          "mean": 53.114838709677414,
+          "d_median": 0.0,
+          "d_mean": 0.0
+        },
+        "MILP Repair": {
+          "n": 31,
+          "na": 2,
+          "median": 90.86,
+          "mean": 64.75806451612904,
+          "d_median": 13.099999999999994,
+          "d_mean": 11.643225806451625
+        },
+        "MH": {
+          "n": 31,
+          "na": 9,
+          "median": 91.35,
+          "mean": 64.04838709677419,
+          "d_median": 13.58999999999999,
+          "d_mean": 10.933548387096778
+        },
+        "FALoss": {
+          "n": 31,
+          "na": 3,
+          "median": 91.52,
+          "mean": 61.26193548387097,
+          "d_median": 13.759999999999991,
+          "d_mean": 8.147096774193557
+        },
+        "PT": {
+          "n": 31,
+          "na": 8,
+          "median": 91.29,
+          "mean": 64.73032258064516,
+          "d_median": 13.530000000000001,
+          "d_mean": 11.61548387096775
+        }
+      }
+    }
+  },
+  "cells_from_defaults": {
+    "loop_outcomes": 97,
+    "performance_eval": 194,
+    "performance_train": 194,
+    "loop_statistics": 194,
+    "runtime": 291
+  },
+  "cells_missing": {
+    "loop_outcomes": 0,
+    "performance_eval": 0,
+    "performance_train": 0,
+    "loop_statistics": 0,
+    "runtime": 0
+  },
+  "cells": {
+    "loop_outcomes": {
+      "Beluga (3 Parts)": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Beluga (4 Parts)": {
+        "MILP": "default",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Beluga (5 Parts)": {
+        "MILP": "default",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Beluga (6 Parts)": {
+        "MILP": "default",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "8Blocks CA": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "8Blocks CI": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Transport": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (15, 10) Det": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (17, 10) Det": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (20, 10) Det": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (30, 20) Det": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (15, 10) Icy": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (17, 10) Icy": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (15, 10) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (17, 10) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (20, 10) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (30, 20) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "1WL (40, 25) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (30, 20) Det": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (40, 25) Det": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (30, 20) Icy": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (15, 10) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (17, 10) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (20, 10) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (30, 20) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "2WL (40, 25) I+P": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Bounc. Ball": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Bounc. Ball ($\\tau=0.01$)": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Bounc. Ball ($\\tau=0.05$)": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Inv. Pend.": {
+        "MILP": "default",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      },
+      "Follow Car": {
+        "MILP": "new",
+        "MH": "default",
+        "FALoss": "default",
+        "PT": "default"
+      }
+    },
+    "performance_eval": {
+      "Beluga (3 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Beluga (4 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Beluga (5 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Beluga (6 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "8Blocks CA": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "8Blocks CI": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Transport": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (15, 10) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (17, 10) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (20, 10) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (30, 20) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (15, 10) Icy": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (17, 10) Icy": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (15, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (17, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (20, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (30, 20) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (40, 25) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (30, 20) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (40, 25) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (30, 20) Icy": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (15, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (17, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (20, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (30, 20) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (40, 25) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Bounc. Ball": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Bounc. Ball ($\\tau=0.01$)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Bounc. Ball ($\\tau=0.05$)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Inv. Pend.": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Follow Car": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      }
+    },
+    "performance_train": {
+      "Beluga (3 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Beluga (4 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Beluga (5 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Beluga (6 Parts)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "8Blocks CA": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "8Blocks CI": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Transport": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (15, 10) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (17, 10) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (20, 10) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (30, 20) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (15, 10) Icy": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (17, 10) Icy": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (15, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (17, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (20, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (30, 20) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "1WL (40, 25) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (30, 20) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (40, 25) Det": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (30, 20) Icy": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (15, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (17, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (20, 10) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (30, 20) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "2WL (40, 25) I+P": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Bounc. Ball": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Bounc. Ball ($\\tau=0.01$)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Bounc. Ball ($\\tau=0.05$)": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Inv. Pend.": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "default",
+        "MILP/safe": "default",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      },
+      "Follow Car": {
+        "Original/goal": "new",
+        "Original/safe": "new",
+        "MILP/goal": "new",
+        "MILP/safe": "new",
+        "MH/goal": "default",
+        "MH/safe": "default",
+        "FALoss/goal": "default",
+        "FALoss/safe": "default",
+        "PT/goal": "default",
+        "PT/safe": "default"
+      }
+    },
+    "loop_statistics": {
+      "Beluga (3 Parts)": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Beluga (4 Parts)": {
+        "MILP/faults": "default",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "default",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Beluga (5 Parts)": {
+        "MILP/faults": "default",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "default",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Beluga (6 Parts)": {
+        "MILP/faults": "default",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "default",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "8Blocks CA": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "8Blocks CI": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Transport": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (15, 10) Det": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (17, 10) Det": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (20, 10) Det": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (30, 20) Det": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (15, 10) Icy": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (17, 10) Icy": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (15, 10) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (17, 10) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (20, 10) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (30, 20) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "1WL (40, 25) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (30, 20) Det": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (40, 25) Det": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (30, 20) Icy": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (15, 10) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (17, 10) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (20, 10) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (30, 20) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "2WL (40, 25) I+P": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Bounc. Ball": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Bounc. Ball ($\\tau=0.01$)": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Bounc. Ball ($\\tau=0.05$)": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Inv. Pend.": {
+        "MILP/faults": "default",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "default",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      },
+      "Follow Car": {
+        "MILP/faults": "new",
+        "MH/faults": "default",
+        "FALoss/faults": "default",
+        "PT/faults": "default",
+        "MILP/its": "new",
+        "MH/its": "default",
+        "FALoss/its": "default",
+        "PT/its": "default"
+      }
+    },
+    "runtime": {
+      "Beluga (3 Parts)": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Beluga (4 Parts)": {
+        "MILP/ce": "default",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "default",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "default",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Beluga (5 Parts)": {
+        "MILP/ce": "default",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "default",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "default",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Beluga (6 Parts)": {
+        "MILP/ce": "default",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "default",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "default",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "8Blocks CA": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "8Blocks CI": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Transport": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (15, 10) Det": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (17, 10) Det": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (20, 10) Det": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (30, 20) Det": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (15, 10) Icy": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (17, 10) Icy": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (15, 10) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (17, 10) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (20, 10) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (30, 20) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "1WL (40, 25) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (30, 20) Det": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (40, 25) Det": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (30, 20) Icy": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (15, 10) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (17, 10) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (20, 10) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (30, 20) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "2WL (40, 25) I+P": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Bounc. Ball": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Bounc. Ball ($\\tau=0.01$)": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Bounc. Ball ($\\tau=0.05$)": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Inv. Pend.": {
+        "MILP/ce": "default",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "default",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "default",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      },
+      "Follow Car": {
+        "MILP/ce": "new",
+        "MH/ce": "default",
+        "FALoss/ce": "default",
+        "PT/ce": "default",
+        "MILP/repair": "new",
+        "MH/repair": "default",
+        "FALoss/repair": "default",
+        "PT/repair": "default",
+        "MILP/total": "new",
+        "MH/total": "default",
+        "FALoss/total": "default",
+        "PT/total": "default"
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+% scope=first; repair_timer=fix. Total is FA + selected repair timer, not elapsed job time.
+% fix excludes the separate final safety check; method-specific preparation/internal checks differ.
+% First-scope continued runs: solver/retraining substeps are lower bounds; PT uses a call-count estimate. Estimate flags remain in the audit.
+% <1 describes a subsecond recorded value, not an upper bound on unrecorded work.
+% User-confirmed CE corrections are scoped in runtime_corrections.json; original measurements remain in the audit.
+% Interrupted phases may be incomplete; NA means unavailable. See the audit JSON for sources and qualifiers.
+% Averages exclude NA per column; denominators and bound flags are recorded in the audit.
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|rrrr|rrrr|rrrr|}
+\toprule
+Benchmark & \multicolumn{4}{|c|}{CE time (s)} & \multicolumn{4}{|c|}{Repair time (s)} & \multicolumn{4}{|c|}{ Total time (s)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
+ & MILP & MH & FALoss & PT & MILP & MH & FALoss & PT & MILP & MH & FALoss & PT \\
+\midrule
+\multicolumn{13}{|c|}{\textbf{Discrete state space benchmarks}}\\\hline
+Beluga (3 Parts) & 1 & 3 & 4 & 1 & 5 & 1 & 2 & ${<}1$ & 6 & 4 & 6 & 1 \\
+Beluga (4 Parts) & 7 & 23 & 18 & 23 & 106 & 22 & 21 & 0 & 113 & 45 & 39 & 23 \\
+Beluga (5 Parts) & 32 & 1812 & 2998 & 35 & 2070 & 589 & 798 & ${<}1$ & 2102 & 2401 & 3796 & 35 \\
+Beluga (6 Parts) & 515 & 42247 & 71552 & 1490 & 105146 & 1386 & 2405 & 17 & 105661 & 43633 & 73957 & 1507 \\
+\hline
+8Blocks CA & 49 & 135 & 404 & 83 & 4 & 1 & 4 & ${<}1$ & 53 & 136 & 409 & 83 \\
+8Blocks CI & 55 & 46 & 67 & 36 & 4 & ${<}1$ & 1 & ${<}1$ & 59 & 46 & 68 & 36 \\
+\hline
+Transport & 24 & 19 & 22 & 46 & 4 & ${<}1$ & ${<}1$ & ${<}1$ & 28 & 19 & 22 & 46 \\
+\hline
+1WL (15, 10) Det & 466 & 12225 & 959 & 11007 & 52 & 394 & 6 & 6 & 518 & 12619 & 965 & 11013 \\
+1WL (17, 10) Det & 33 & 57 & 32 & 28 & 8 & ${<}1$ & ${<}1$ & ${<}1$ & 41 & 57 & 32 & 28 \\
+1WL (20, 10) Det & 627 & 956 & 1694 & 3962 & 152 & 5 & 5 & 3 & 779 & 961 & 1699 & 3965 \\
+1WL (30, 20) Det & 4876 & 70629 & 20087 & 129033 & 468 & 1689 & 31 & 29 & 5344 & 72318 & 20118 & 129062 \\
+\hline
+1WL (15, 10) Icy & 308 & 492 & 320 & 468 & 5 & 1 & ${<}1$ & ${<}1$ & 313 & 493 & 320 & 468 \\
+1WL (17, 10) Icy & 1057 & 597 & 782 & 769 & 7 & ${<}1$ & ${<}1$ & ${<}1$ & 1064 & 597 & 782 & 769 \\
+\hline
+1WL (15, 10) I+P & 72 & 73 & 110 & 82 & 6 & ${<}1$ & 2 & ${<}1$ & 78 & 73 & 112 & 82 \\
+1WL (17, 10) I+P & 91 & 96 & 87 & 118 & 14 & ${<}1$ & 1 & ${<}1$ & 105 & 96 & 88 & 118 \\
+1WL (20, 10) I+P & 94 & 129 & 175 & 109 & 7 & 1 & 2 & ${<}1$ & 101 & 130 & 177 & 109 \\
+1WL (30, 20) I+P & 11368 & 72433 & 3412 & 136125 & 360 & 1241 & 28 & 35 & 11728 & 73674 & 3440 & 136160 \\
+1WL (40, 25) I+P & 806 & 497 & 2475 & 2988 & 20 & 1 & 9 & 1 & 826 & 498 & 2484 & 2989 \\
+\hline
+2WL (30, 20) Det & 134 & 16988 & 321 & 20511 & 235 & 1215 & 5 & 119 & 369 & 18203 & 326 & 20630 \\
+2WL (40, 25) Det & 275 & 11648 & 529 & 52269 & 275 & 592 & 2 & 130 & 550 & 12240 & 531 & 52399 \\
+\hline
+2WL (30, 20) Icy & ${<}1$ & 53 & 113 & 99 & 0 & ${<}1$ & 2 & ${<}1$ & ${<}1$ & 53 & 115 & 99 \\
+\hline
+2WL (15, 10) I+P & 78 & 217 & 81 & 5291 & 21 & 2 & ${<}1$ & 5 & 99 & 219 & 81 & 5296 \\
+2WL (17, 10) I+P & 223 & 18123 & 86 & 77 & 146 & 1511 & ${<}1$ & 2 & 369 & 19634 & 86 & 79 \\
+2WL (20, 10) I+P & 104 & 102 & 176 & 159 & 14 & ${<}1$ & ${<}1$ & 3 & 118 & 102 & 176 & 162 \\
+2WL (30, 20) I+P & 368 & 192 & 1267 & 55318 & 179 & 1 & 12 & 120 & 547 & 193 & 1279 & 55438 \\
+2WL (40, 25) I+P & 263 & 70 & 163 & 70611 & 128 & ${<}1$ & 1 & 129 & 391 & 70 & 164 & 70740 \\
+\hline
+\multicolumn{13}{|c|}{\textbf{Continuous state space benchmarks}}\\\hline
+Bounc. Ball & 64 & 66 & 72 & 65 & 6 & 4 & 6 & ${<}1$ & 70 & 70 & 78 & 65 \\
+Bounc. Ball ($\tau=0.01$) & 154 & 187 & 195 & 466 & 6 & 8 & 12 & ${<}1$ & 160 & 195 & 207 & 466 \\
+Bounc. Ball ($\tau=0.05$) & 82 & 149 & 180 & 83 & 6 & 12 & 29 & ${<}1$ & 88 & 161 & 209 & 83 \\
+\hline
+Inv. Pend. & 2417 & 1855 & 2366 & 7735 & 25 & 98 & 71 & ${<}1$ & 2442 & 1953 & 2437 & 7735 \\
+\hline
+Follow Car & 419 & 33702 & 34362 & 4203 & 10 & 2548 & 3355 & ${<}1$ & 429 & 36250 & 37717 & 4203 \\
+\hline
+% \textbf{Average} & \textbf{808.5} & \textbf{9220.0} & \textbf{4681.0} & \textbf{16235.2} & \textbf{3532.0} & \textbf{365.3} & \textbf{219.8} & \textbf{19.7} & \textbf{4340.5} & \textbf{9585.3} & \textbf{4900.8} & \textbf{16619.8} \\
+% \hline
+\end{tabular}}
+
+
+
+
+
+% % \resizebox{\textwidth}{!}{
+% \scriptsize
+% \setlength{\tabcolsep}{0.5em}
+% \begin{tabular}{|l|rrrr|rrrr|rrrr|}
+% \toprule
+% Benchmark & \multicolumn{4}{|c|}{CE time (s)} & \multicolumn{4}{|c|}{Repair time (s)} & \multicolumn{4}{|c|}{Total time (s)} \\
+% \cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
+%  & MILP & MH & FALoss & PT & MILP & MH & FALoss & PT & MILP & MH & FALoss & PT \\
+% \midrule
+% \multicolumn{13}{|c|}{\textbf{Discrete state space benchmarks}}\\\hline
+% Beluga (3 Parts)  & 1 & 3 & 4 & 1 & $ 5$ & $ 1$ & $ 2$ & ${<}1$ & $ 6$ & $ 4$ & $ 6$ & 1 \\
+% Beluga (4 Parts)  & 7 & 23 & 18 & 23 & $ 106$ & 28 & 25 & $<1$ & $ 113$ & 51 & 43 & 23 \\
+% Beluga (5 Parts)  & 32 & 1812 & 2998 & 35 & 2074 & 1159 & 940 & 1 & 2106 & 2971 & 3938 & 36 \\
+% Beluga (6 Parts)  & 515 & 42247 & 71552 & 1490 & 105169 & 5107 & 3266 & 434 & 105684 & 47354 & 74818 & 1924 \\
+% \hline
+% 8Blocks CA & 49 & 135 & 404 & 83 & $ 4$ & $ 1$ & $ 4$ & ${<}1$ & $ 53$ & $ 136$ & $ 409$ & 83 \\
+% 8Blocks CI & 55 & 46 & 67 & 36 & 4 & 1 & 1 & ${<}1$ & 59 & 47 & 68 & 36 \\
+% \hline
+% Transport & 24 & 19 & 22 & 46 & $ 4$ & $<1$ & $<1$ & ${<}1$ & $ 28$ & $ 19$ & $ 22$ & 46 \\
+% \hline
+% 1WL (15, 10) Det & 466 & 12225 & 959 & 11007 & $ 52$ & 2919 & 8 & 2788 & $ 518$ & 15144 & 967 & 13795 \\
+% 1WL (17, 10) Det & 33 & 57 & 32 & 28 & $ 8$ & $<1$ & $<1$ & ${<}1$ & $ 41$ & $ 57$ & $ 32$ & 28 \\
+% 1WL (20, 10) Det & 627 & 956 & 1694 & 3962 & 173 & 17 & 7 & 205 & 800 & 973 & 1701 & 4167 \\
+% 1WL (30, 20) Det & 4876 & 70629 & 20087 & 129033 & 517 & 16262 & 43 & $ 29671$ & 5393 & 86891 & 20130 & $ 158704$ \\
+% \hline
+% 1WL (15, 10) Icy & 308 & 492 & 320 & 468 & 5 & 1 & ${<}1$ & ${<}1$ & 313 & 493 & 320 & 468 \\
+% 1WL (17, 10) Icy & 1057 & 597 & 782 & 769 & 7 & ${<}1$ & ${<}1$ & ${<}1$ & 1064 & 597 & 782 & 769 \\
+% \hline
+% 1WL (15, 10) I+P & 72 & 73 & 110 & 82 & 6 & $<1$ & 2 & ${<}1$ & 78 & $ 73$ & 112 & 82 \\
+% 1WL (17, 10) I+P & 91 & 96 & 87 & 118 & $ 14$ & $<1$ & 1 & ${<}1$ & $ 105$ & $ 96$ & 88 & 118 \\
+% 1WL (20, 10) I+P & 94 & 129 & 175 & 109 & 7 & $ 1$ & $ 2$ & ${<}1$ & 101 & $ 130$ & $ 177$ & 109 \\
+% 1WL (30, 20) I+P & 11368 & 72433 & 3412 & $ 136125$ & 378 & 5707 & 35 & 8191 & 11746 & 78140 & 3447 & $ 144316$ \\
+% 1WL (40, 25) I+P & 806 & 497 & 2475 & 2988 & 21 & 1 & 10 & 8 & 827 & 498 & 2485 & 2996 \\
+% \hline
+% 2WL (30, 20) Det & 134 & 16988 & 321 & 20511 & 260 & 16120 & 9 & $ 120976$ & 394 & 33108 & 330 & $ 141487$ \\
+% 2WL (40, 25) Det & 275 & 11648 & 529 & 52269 & 306 & 6469 & 3 & $ 99702$ & 581 & 18117 & 532 & $ 151971$ \\
+% \hline
+% 2WL (30, 20) Icy & $<1$ & 53 & 113 & 99 & $<1$ & ${<}1$ & 2 & ${<}1$ & $<1$ & 53 & 115 & 99 \\
+% \hline
+% 2WL (15, 10) I+P & 78 & 217 & 81 & $ 5291$ & $ 21$ & 20 & $<1$ & \textit{NA} & $ 99$ & 237 & $ 81$ & \textit{NA} \\
+% 2WL (17, 10) I+P & 223 & 18123 & 86 & 77 & 185 & 18566 & $<1$ & 180 & 408 & 36689 & $ 86$ & 257 \\
+% 2WL (20, 10) I+P & 104 & 102 & 176 & 159 & 17 & 2 & $<1$ & 238 & 121 & 104 & $ 176$ & 396 \\
+% 2WL (30, 20) I+P & 368 & 192 & 1267 & $ 55318$ & 202 & 5 & 16 & 102796 & 570 & 197 & 1283 & $ 158114$ \\
+% 2WL (40, 25) I+P & 263 & 70 & 163 & 70611 & 132 & ${<}1$ & 1 & $ 82163$ & 395 & 70 & 164 & $ 152774$ \\
+% \hline
+% \multicolumn{13}{|c|}{\textbf{Continuous state space benchmarks}}\\\hline
+% Bounc. Ball & 64 & 66 & 72 & 65 & 6 & 6 & 7 & ${<}1$ & 70 & 72 & 79 & 65 \\
+% Bounc. Ball ($\tau = 0.01$) & 154 & 187 & 195 & 466 & 6 & 11 & 14 & ${<}1$ & 160 & 198 & 209 & 466 \\
+% Bounc. Ball ($\tau = 0.05$) & 82 & 149 & 180 & 83 & 6 & 15 & 35 & ${<}1$ & 88 & 164 & 215 & 83 \\
+% \hline
+% Inv. Pend. & 2417 & 1855 & 2366 & 7735 & 25 & 119 & 82 & ${<}1$ & 2442 & 1974 & 2448 & 7735 \\
+% \hline
+% Follow Car & 419 & 33702 & 34362 & 4203 & 11 & 3392 & 3960 & 18 & 430 & 37094 & 38322 & 4221 \\
+% \hline
+% %\textbf{Average} & \textbf{$ 808.5$} & \textbf{9220.0} & \textbf{4681.0} & \textbf{$ 17647.4$} & \textbf{$ 3539.8$} & \textbf{$ 2449.4$} & \textbf{$ 273.5$} & \textbf{$ 14912.3^{I}$} & \textbf{$ 4348.3$} & \textbf{$ 11669.5$} & \textbf{$ 4954.5$} & \textbf{$ 32971.6^{I}$} \\
+% % \hline
+% \end{tabular}
+% % }

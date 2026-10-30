@@ -1,0 +1,75 @@
+\newcommand{\nc}[1]{\textcolor{gray}{\textit{#1}}}
+% each macro fills two cells: Repair & Verif.
+\newcommand{\cS}{\checkmark & \checkmark}      % verified safe
+\newcommand{\cU}{\checkmark & $\times$}        % verifier finds unsafe path
+\newcommand{\cK}{\checkmark & \nc{OOR}}        % verifier out of resources
+\newcommand{\CE}{\nc{CE-OOR} & \nc{--}}
+\newcommand{\RTO}{\nc{Repair-TO} & \nc{--}}
+\newcommand{\MI}{\nc{MaxIt} & \nc{--}}
+\newcommand{\MT}{\nc{MaxTime} & \nc{--}}
+
+% ---- table ----
+% \begin{table}[t]
+% \centering
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l |ll |ll |ll |ll|}
+\toprule
+& \multicolumn{2}{c|}{MILP} & \multicolumn{2}{c|}{MH} & \multicolumn{2}{c|}{FALoss} & \multicolumn{2}{c|}{PT} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+Benchmark & Converged & Verif. & Converged & Verif. & Converged & Verif. & Converged & Verif. \\
+\midrule
+\multicolumn{9}{|c|}{\textbf{Discrete state space benchmarks}}\\
+\midrule
+Beluga (3 Parts)  & \cU & \cU & \cU & \cU \\
+Beluga (4 Parts)  & \cU & \cK & \cK & \CE \\
+Beluga (5 Parts)  & \cK & \MI & \MI & \cK \\
+Beluga (6 Parts)  & \RTO & \MI & \MI & \cU \\
+\hline
+8Blocks CA & \cU & \cU & \cU & \cU \\
+8Blocks CI & \cK & \cK & \cK & \cK \\
+\hline
+Transport & \cU & \cU & \cU & \cU \\
+\hline
+1WL (15, 10) Det & \cU & \MI & \cK & \cK \\
+1WL (17, 10) Det & \cU & \cU & \cU & \cU \\
+1WL (20, 10) Det & \cK & \cK & \cK & \cK \\
+1WL (30, 20) Det & \cK & \MI & \cK & \MT \\
+\hline
+1WL (15, 10) Icy & \cU & \cU & \cU & \cU \\
+1WL (17, 10) Icy & \cK & \cK & \cU & \cK \\
+\hline
+1WL (15, 10) I+P & \cK & \cU & \cK & \cU \\
+1WL (17, 10) I+P & \cU & \cU & \cK & \cK \\
+1WL (20, 10) I+P & \cK & \cU & \cU & \cK \\
+1WL (30, 20) I+P & \cK & \MI & \cK & \MT \\
+1WL (40, 25) I+P & \cK & \cK & \cK & \cK \\
+\hline
+2WL (30, 20) Det & \cK & \MI & \cK & \MT \\
+2WL (40, 25) Det & \cK & \MI & \cK & \MT \\
+\hline
+2WL (30, 20) Icy & \CE & \cK & \cK & \cK \\
+\hline
+2WL (15, 10) I+P & \cU & \cK & \cU & \CE \\
+2WL (17, 10) I+P & \cK & \MI & \cU & \cU \\
+2WL (20, 10) I+P & \cS & \cK & \cU & \cU \\
+2WL (30, 20) I+P & \cK & \cK & \cK & \MT \\
+2WL (40, 25) I+P & \cK & \cK & \cK & \MT \\
+\midrule
+\multicolumn{9}{|c|}{\textbf{Continuous state space benchmarks}}\\
+\midrule
+Bounc. Ball & \cK & \cK & \cK & \cK \\
+Bounc. Ball ($\tau=0.01$) & \cK & \cK & \cK & \cK \\
+Bounc. Ball ($\tau=0.05$) & \cK & \cK & \cK & \cK \\
+\hline
+Inv. Pend. & \CE & \cK & \cK & \cK \\
+\hline
+Follow Car & \cK & \MI & \MI & \cK \\
+% \midrule
+% \textbf{Improved (of 31)}          & \textbf{28} & & \textbf{22} & & \textbf{28} & & \textbf{23} & \\
+% \quad verified safe ($\checkmark$)  & & 1  & & 0  & & 0  & & 0  \\
+% \quad unsafe path found ($\times$)  & & 9  & & 8  & & 10 & & 9  \\
+% \quad inconclusive (OOR)            & & 18 & & 14 & & 18 & & 14 \\
+\bottomrule
+\end{tabular}
+}

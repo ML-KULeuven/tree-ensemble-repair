@@ -1,0 +1,9 @@
+._*
+__pycache__
+.vscode/
+.claude/
+CLAUDE.md
+log*
+old*
+results*
+robustness*

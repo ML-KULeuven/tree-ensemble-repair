@@ -1,5 +1,7 @@
 __pycache__/
 *.py[cod]
 results/
+benchmarks.zip
+safety/benchmarks/
 ._*
 .DS_Store

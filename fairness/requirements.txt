@@ -1,0 +1,20 @@
+# Tested with Python 3.11
+numpy==1.26.4
+pandas==3.0.2
+scipy==1.16.1
+scikit-learn==1.7.1
+xgboost==2.0.3
+gurobipy==11.0.0        # needs a Gurobi license (free for academics)
+tensorflow-cpu==2.21.0  
+aif360==0.6.1      
+folktables==0.0.12      # ACS datasets
+pyreadstat==1.3.4       # MEPS dataset
+requests==2.32.5        # MEPS dataset
+matplotlib==3.10.6
+seaborn==0.13.2
+click==8.2.1
+tqdm==4.67.1
+numba==0.65.0           # needed by tree_compress 
+
+dtai-veritas==0.2.3
+prada @ git+https://github.com/laudv/prada.git@9839796b13c64e78935881fe258fb69637741d97   # branch lorenzo-neurips26
