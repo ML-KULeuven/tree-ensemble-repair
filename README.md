@@ -15,10 +15,6 @@ This codebase applies it to tree ensembles that must adhere to two distinct prop
 | [`safety/`](safety/) | **Multistep safety** — a tree ensemble policy must not reach an unsafe state | [safety/README.md](safety/README.md) |
 
 
-## License
-
-This code is released under the Apache License 2.0 (see [LICENSE](LICENSE)).
-
 ## Citation
 
 Paper: [TODO: link to the paper]
