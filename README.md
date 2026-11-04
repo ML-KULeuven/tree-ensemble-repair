@@ -7,12 +7,12 @@ Given a trained ensemble, our MILP repair loop:
 - modifies the ensemble's leaf values through a MILP so that the repaired model satisfies the property on all given counterexamples (while not degrading predictive performance);
 - iterates the two earlier steps until no more counterexamples are found by the verifier. 
 
-This codebase applies it to tree ensembles that must adhere to two distinct properties, fairness and safety. Each folder has its own README with setup and run instructions:
+This codebase applies our MILP repair loop to tree ensembles that must adhere to two distinct properties, fairness and safety. Each folder has its own README with setup and run instructions:
 
 | Folder | Property enforced | README |
 |---|---|---|
 | [`fairness/`](fairness/) | **Individual fairness** — the prediction must not change when the protected attribute is flipped | [fairness/README.md](fairness/README.md) |
-| [`safety/`](safety/) | **Multistep safety** — a tree ensemble policy must not reach an unsafe state | [safety/README.md](safety/README.md) |
+| [`safety/`](safety/) | **Multistep safety** — a tree ensemble policy must not choose an unsafe action | [safety/README.md](safety/README.md) |
 
 
 ## Citation
