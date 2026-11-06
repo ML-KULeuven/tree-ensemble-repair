@@ -23,7 +23,7 @@ Below are all repair methods we use, together with the names used in the paper (
 
    The MILP methods need a Gurobi licence (`GRB_LICENSE_FILE`).
 
-2. **Benchmarks.** Download `benchmarks.zip` from this [TODO link], place it in this folder and unzip it:
+2. **Benchmarks.** Download `benchmarks.zip` from this [link](https://doi.org/10.5281/zenodo.23812380), place it in this folder and unzip it:
 
    ```bash
    unzip benchmarks.zip      # creates safety/benchmarks/
