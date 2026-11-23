@@ -17,7 +17,7 @@ This codebase applies our MILP repair loop to tree ensembles that must adhere to
 
 ## Citation
 
-You find the full paper [here](https://openreview.net/forum?id=MgEUWFldkw).
+You find the full paper [here](https://openreview.net/pdf?id=MgEUWFldkw).
 
 If you use this code, please cite:
 
